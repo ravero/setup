@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#------------------------------------------------------------------------------
+# Setup Game Emulation
+#------------------------------------------------------------------------------
+
+## Copy files
+app_support_path="${HOME}/Library/Application Support/"
+backup_path="${HOME}/OneDrive/Games"
+backup_filename="${backup_path}/OpenEmuLibrary.zip"
+
+if [[ ! -d "$app_support_path/OpenEmu" ]]; then
+    (cd "$app_support_path"; unzip $backup_filename)
+else
+    echo "The OpenEmu Library path already exists."
+fi
+
+## Install OpenEmu
+brew cask install homebrew/cask-versions/openemu-experimental
