@@ -8,6 +8,9 @@ dotnet tool install --global dotnet-ef
 dotnet tool install -g dotnet-aspnet-codegenerator
 dotnet tool install --global dotnet-giio
 
+## Swift Lint
+brew install swiftlint
+
 ## Xcode Themes
 # Reference: https://medium.com/@EldonChan/customizing-xcode-themes-e98d0f06101e
 themes_folder_name=FontAndColorThemes
