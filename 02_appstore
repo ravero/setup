@@ -12,12 +12,6 @@ mas install 768053424           # Gapplin
 mas install 640199958		    # Apple Developer
 
 ## Productivity
-mas install 462054704           # Microsoft Word
-mas install 462058435           # Microsoft Excel
-mas install 462062816           # Microsoft PowerPoint
-mas install 784801555           # Microsoft OneNote
-mas install 985367838           # Microsoft Outlook
-mas install 823766827           # OneDrive
 mas install 409201541           # Pages
 mas install 409203825           # Numbers
 mas install 409183694           # Keynote
@@ -45,3 +39,4 @@ mas install 803453959           # Slack
 mas install 1477385213          # Save to Pocket
 mas install 568494494           # Pocket
 mas install 1473726602          # Tab Space
+mas install 808285143           # myTuner Radio Pro
