@@ -11,9 +11,7 @@ brew cask install microsoft-edge
 brew cask install microsoft-teams
 brew cask install powershell
 brew cask install oracle-jdk
-brew cask install parallels
 brew cask install choosy
-brew cask install vmware-fusion
 brew cask install zoomus
 
 ## Regular apps
@@ -24,7 +22,6 @@ brew cask install bartender
 brew cask install docker
 brew cask install firefox
 brew cask install fork
-brew cask install gitkraken
 brew cask install google-chrome
 brew cask install handbrake
 brew cask install imazing
@@ -35,12 +32,14 @@ brew cask install postman
 brew cask install reflector
 brew cask install rider
 brew cask install skype
+brew cask install sourcetree
 brew cask install staruml
 brew cask install upwork
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install whatsapp
 brew cask install iterm2
+brew cask install rectangle
 
 ## Quicklook Plugins
 brew cask install qlcolorcode 
@@ -50,3 +49,13 @@ brew cask install quicklook-json
 brew cask install qlimagesize
 brew cask install suspicious-package
 brew cask install provisionql quicklookapk
+
+## Optional casks
+read -p "Do you want to install 'Parallels Desktop'? " -n 1 -r
+echo
+[[ $REPLY =~ ^[Yy]$ ]] && brew cask install parallels
+
+read -p "Do you want to install 'VMWare Fusion'? " -n 1 -r
+echo
+[[ $REPLY =~ ^[Yy]$ ]] && brew cask install vmware-fusion
+
