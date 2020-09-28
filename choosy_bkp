@@ -5,8 +5,4 @@ choosy_config_file_name="behaviours.plist"
 choosy_data_path="${HOME}/Library/Application Support/Choosy"
 choosy_config_file="${choosy_data_path}/${choosy_config_file_name}"
 
-if [[ ! -d "$choosy_data_path" ]]; then
-    mkdir $choosy_data_path
-fi
-
-cp data/choosy/behaviours.plist "${choosy_data_path}/"
+cp "${choosy_config_file}" "data/choosy/${choosy_config_file_name}"
