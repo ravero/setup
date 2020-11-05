@@ -19,6 +19,7 @@ brew cask install android-studio
 brew cask install alfred
 brew cask install azure-data-studio
 brew cask install bartender
+brew cask install cheatsheet
 brew cask install docker
 brew cask install firefox
 brew cask install fork
