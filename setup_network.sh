@@ -32,7 +32,7 @@ function apply_dns() {
 }
 
 # Ask to apply on the default adapters
-declare -a adapters=('Wi-Fi' 'Display Ethernet' 'USB 10/100/1000 LAN' 'Thunderbolt Bridge', 'Ethernet')
+declare -a adapters=('Wi-Fi' 'Display Ethernet' 'USB 10/100/1000 LAN' 'Thunderbolt Bridge' 'Ethernet')
 for adapter in "${adapters[@]}"
 do
     apply_dns "${adapter}"

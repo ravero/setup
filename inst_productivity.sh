@@ -4,6 +4,14 @@
 # Can be installed from both App Store or cask.
 #------------------------------------------------------------------------------
 
+mas install 409201541           # Pages
+mas install 409203825           # Numbers
+mas install 409183694           # Keynote
+mas install 1176895641          # Spark
+mas install 1310686187          # Scrivener 3
+
+brew cask install marked
+
 read -p "Do you want to install Microsoft Office from the App Store? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -18,3 +26,4 @@ else
     echo "Installing Microsoft Office from brew cask..."
     brew cask install microsoft-office
 fi
+
