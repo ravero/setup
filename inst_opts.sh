@@ -1,5 +1,13 @@
 #!/bin/bash
 
+read -p "Do you want to install 'VMWare Fusion'? " -n 1 -r
+echo
+[[ $REPLY =~ ^[Yy]$ ]] && brew cask install vmware-fusion
+
+read -p "Do you want to install 'Spark'? " -n 1 -r
+echo
+[[ $REPLY =~ ^[Yy]$ ]] && mas install 1176895641          # Spark
+
 read -p "Do you want to install 'Alfred'? " -n 1 -r
 echo
 [[ $REPLY =~ ^[Yy]$ ]] && brew cask install alfred
@@ -28,6 +36,6 @@ read -p "Do you want to install 'Speedtest'? " -n 1 -r
 echo
 [[ $REPLY =~ ^[Yy]$ ]] && mas install 1153157709          # Speedtest
 
-read -p "Do you want to install 'VMWare Fusion'? " -n 1 -r
+read -p "Do you want to install 'Zoom.us'? " -n 1 -r
 echo
-[[ $REPLY =~ ^[Yy]$ ]] && brew cask install vmware-fusion
+[[ $REPLY =~ ^[Yy]$ ]] && brew cask install zoomus

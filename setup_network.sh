@@ -3,11 +3,8 @@
 # Network Setup
 #
 # This script will set defaults for network connections on the computer.
-# Check if the Network Services apply correctly. If you need to list use:
-#
-#   networksetup -listallnetworkservices
-#
-# Then update the script apropriately.
+# It will list the identified networks on the computer and apply and ask
+#   each one to apply settings.
 #------------------------------------------------------------------------------
 
 # DNS Settings
@@ -31,9 +28,24 @@ function apply_dns() {
     fi
 }
 
+# Determine available networks to list
+NETS_FILE=`mktemp`
+NETS_FILTERED_FILE=`mktemp`
+
+networksetup -listallnetworkservices >> $NETS_FILE
+
+LINES=`wc -l ${NETS_FILE} | awk '{ print $1 }'`
+LINES=$((LINES-1))
+tail -n $LINES $NETS_FILE >> $NETS_FILTERED_FILE
+
+IFS=$'\n' read -d '' -r -a adapters < $NETS_FILTERED_FILE
+
 # Ask to apply on the default adapters
-declare -a adapters=('Wi-Fi' 'Display Ethernet' 'USB 10/100/1000 LAN' 'Thunderbolt Bridge' 'Ethernet')
 for adapter in "${adapters[@]}"
 do
     apply_dns "${adapter}"
 done
+
+# Cleanup
+rm $NETS_FILE
+rm $NETS_FILTERED_FILE

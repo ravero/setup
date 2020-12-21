@@ -32,3 +32,4 @@ duti -s com.microsoft.VSCode md all
 duti -s com.microsoft.VSCode txt all
 duti -s com.microsoft.VSCode json all
 duti -s com.microsoft.VSCode sh all
+duti -s com.microsoft.VSCode PublishSettings all
